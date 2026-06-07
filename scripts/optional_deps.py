@@ -1,9 +1,9 @@
 """Centralized loader for optional third-party deps (weasyprint, pypdf, PyMuPDF).
 
-build.py and stabilize.py previously each had inline `from weasyprint import HTML`
-try/except blocks with duplicated install hints; this module collapses those into
-one resolver each so the import error message stays consistent and the
-WeasyPrint runtime is configured once at the import call site.
+build.py previously had inline `from weasyprint import HTML` try/except blocks
+with duplicated install hints; this module collapses those into one resolver
+each so the import error message stays consistent and the WeasyPrint runtime
+is configured once at the import call site.
 """
 from __future__ import annotations
 

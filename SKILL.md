@@ -76,7 +76,7 @@ Rules:
 
 Before creating or modifying an output, lock the contract: language, template, output format, page or length target, visual acceptance check, and verification command. Infer from the user's request when clear; ask only when missing fields materially change the deliverable.
 
-Use the nearest existing template and verification path. Do not add a new template, stabilizer profile, shared CSS layer, dependency, script flag, or optional mode unless the current request cannot be satisfied without it.
+Use the nearest existing template and verification path. Do not add a new template, shared CSS layer, dependency, script flag, or optional mode unless the current request cannot be satisfied without it.
 
 If a change touches `SKILL.md`, templates, scripts, references, or package inputs, decide whether `dist/kami.zip` must be refreshed before handoff. Shipped behavior is not ready until the package contains the changed files.
 

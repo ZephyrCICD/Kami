@@ -289,7 +289,7 @@ Marp is the third rendering path, used only when the user explicitly asks for Ma
 
 ### Install
 
-Use the `npx @marp-team/marp-cli@latest ...` form below for zero-install. For repeat use, install via `npm i -g @marp-team/marp-cli` or `brew install marp-cli` (see [marp-cli docs](https://github.com/marp-team/marp-cli)). Kami's build pipeline (`build.py` / `stabilize.py` / `package-skill.sh`) does not call `marp`.
+Use the `npx @marp-team/marp-cli@latest ...` form below for zero-install. For repeat use, install via `npm i -g @marp-team/marp-cli` or `brew install marp-cli` (see [marp-cli docs](https://github.com/marp-team/marp-cli)). Kami's build pipeline (`build.py` / `package-skill.sh`) does not call `marp`.
 
 ### Files
 
@@ -389,18 +389,14 @@ python3 scripts/build.py --check       # scan for CSS rule violations
 python3 scripts/build.py --check-density       # warn on pages with >25% trailing whitespace
 ```
 
-### Layout stabilizer (HTML templates)
+### Page overflow (constrained templates)
 
-When a constrained template is near page overflow (one-pager, letter, resume, and English variants), run the stabilizer first, then verify:
+When a constrained template (one-pager, letter, resume, and their variants) runs over its page ceiling, fix it by editing content, not by shrinking type: cut or merge body copy until it fits, since tiny font / line-height / margin changes break the layout (see High-Risk Pitfalls). Then verify:
 
 ```bash
-python3 scripts/stabilize.py all --out-dir dist/stabilized --report
-python3 scripts/stabilize.py one-pager letter resume one-pager-en letter-en resume-en --strict --report
 python3 scripts/build.py --check
 python3 scripts/build.py --verify
 ```
-
-`scripts/stabilize.py` is intentionally independent from `scripts/build.py`. Thresholds and solver behavior are controlled by `references/stabilizer_profiles.json`.
 
 ### Hi-res visual inspection
 
