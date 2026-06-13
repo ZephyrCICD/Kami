@@ -517,6 +517,8 @@ For resume, one-pager, and other length-capped docs.
 
 Apply dense mode only when the 4-project layout already overflows. Do not use it as a default; the visual rhythm is noticeably tighter.
 
+Resume templates use section-title bottom rules and borderless project rows. Do not reintroduce project `border-top` as a density aid; it creates double rules below headings and orphan rules at page breaks.
+
 ### 4. (P1) Font fallback causes page count inconsistency
 
 **Symptom**: 2 pages locally, 4 pages in CI / on server.

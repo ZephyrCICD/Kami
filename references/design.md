@@ -378,6 +378,8 @@ ul.dash li::before {
 }
 ```
 
+Resume exception: resume templates use a quiet bottom rule instead of the brand left bar, and project rows stay borderless to avoid double rules and page-top orphan lines.
+
 ### Table (kami-table)
 
 Unified table component across all templates. Base class applies to bare `<table>` or `.kami-table`.

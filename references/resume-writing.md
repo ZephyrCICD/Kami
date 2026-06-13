@@ -135,6 +135,20 @@ For 6 projects there is no pre-built variant; apply the row-6 values directly an
 
 ---
 
+## Visual rhythm for resume templates
+
+Resume uses a quieter divider pattern than long-form templates because it has more repeated headings in two pages.
+
+- Header and section titles use a single warm bottom rule, not a brand-color left bar.
+- Project rows have no top or bottom border; separate them with padding and project-name weight.
+- Top metrics stack the value over the label inside each of the four columns. Metric labels stay on one line; if a label wraps, shorten it before changing the layout.
+- In English resumes, include the unit inside the value (`8 yrs`, `120ms`, `$280K`) rather than as a separate placeholder.
+- Highlight boxes such as open-source validation use tint and radius only, without a vertical brand rail.
+
+This keeps the page editorial and avoids double rules when a project sits directly below a section title or lands at the top of page 2.
+
+---
+
 ## Page 2 rhythm
 
 Page 2 has more space than page 1. Do not compress it to match page 1 density.
