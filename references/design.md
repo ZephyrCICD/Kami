@@ -380,6 +380,8 @@ ul.dash li::before {
 
 Resume exception: resume templates use a quiet bottom rule instead of the brand left bar, and project rows stay borderless to avoid double rules and page-top orphan lines.
 
+One-pager / document header exception: the top header opens with an uppercase eyebrow led by an 8pt x 1.5pt brand tick, a serif title, and a 0.5pt hairline rule under the whole block. It does not use the full-height brand left bar, which reads heavy and crude as a page-top frame. Keep the left bar a section-level and pull-quote device, not a page header.
+
 ### Table (kami-table)
 
 Unified table component across all templates. Base class applies to bare `<table>` or `.kami-table`.

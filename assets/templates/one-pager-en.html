@@ -57,10 +57,9 @@
   .serif { font-family: var(--serif); }
 
   .header {
-    border-left: 2.5pt solid var(--brand);
-    border-radius: 1.5pt;
-    padding-left: 8pt;
-    margin-bottom: 14pt;
+    margin-bottom: 16pt;
+    padding-bottom: 12pt;
+    border-bottom: 0.5pt solid var(--border);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -68,12 +67,23 @@
   }
   .title-block { flex: 1; }
   .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7pt;
     font-size: 9pt;
     color: var(--brand);
-    letter-spacing: 1pt;
+    letter-spacing: 1.5pt;
     text-transform: uppercase;
-    margin-bottom: 4pt;
+    margin-bottom: 7pt;
     font-weight: 500;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8pt;
+    height: 1.5pt;
+    border-radius: 0.75pt;
+    background: var(--brand);
+    flex-shrink: 0;
   }
   h1 {
     font-family: var(--serif);
